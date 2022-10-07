@@ -1,8 +1,8 @@
 # AppFinancas
 
-O sistema trata-se de uma aplicação para controles de finanças pessoais. 
-A aplicação está conectada com a API RESTful criada por mim no endereço https://appfinancasserver.herokuapp.com/. 
-A API se conecta com um banco de dados PostgreSQL, também criado por mim. Todos os dados são armazenados no banco, incluindo a exclusão e edição de dados.
+- O sistema trata-se de uma aplicação para controles de finanças pessoais. 
+- A aplicação está conectada com a API RESTful criada por mim no endereço https://appfinancasserver.herokuapp.com/. 
+- A API se conecta com um banco de dados PostgreSQL, também criado por mim. Todos os dados são armazenados no banco, incluindo a exclusão e edição de dados.
 
 As funcionalidades da aplicação são: 
 
