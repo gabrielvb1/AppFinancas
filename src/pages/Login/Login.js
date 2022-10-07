@@ -60,16 +60,20 @@ function Login() {
         </div>
 
         <div className='login-card'>
-          <h2>Login</h2>
           <form onSubmit={handleSubmit}>
-            <label>Email</label>
+          <h2>Login</h2>
+            <div className='container-label'>
+              <label>Email</label>
+            </div>
             <input
               type='email'
               name='email'
               onChange={handleChangeInput}
               value={formData.email}
             ></input>
-            <label >Password</label>
+            <div className='container-label'>
+              <label>Senha</label>
+            </div>
             <input
               type='password'
               name='senha'

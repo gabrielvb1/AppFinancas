@@ -12,15 +12,11 @@
 
 .container-signup header {
     display: flex;
-    position: relative;
-    bottom: 20px;
-    right: 500px;
-    color: white;
-
-}
-
-.container-signup header img {
-    margin-right: 10px;
+    align-items: center;
+    width: 90%;
+    height: 10%;
+    gap: 13px;
+    color: #FFFFFF;
 }
 
 .container-signup main {
@@ -35,11 +31,13 @@
 .container-signup form {
     display: flex;
     flex-direction: column;
+    width: 83%;
+    height: 100%;
 }
 
 .container-signup h2 {
-    margin-top: 40px;
-    margin-bottom: 33px;
+    margin-top: 9%;
+    margin-bottom: 5%;
     color: #7978D9;
 
 }
@@ -48,9 +46,9 @@
     margin-bottom: 8px;
 }
 
-input {
-    width: 365px;
-    height: 50px;
+.container-signup input {
+    width: 100%;
+    height: 9%;
     margin-bottom: 31px;
     padding: 0 5px;
 }
@@ -76,12 +74,34 @@ input {
     cursor: pointer;
 }
 
-.span-error{
+.span-error {
     color: red;
     margin-top: -20px;
     margin-bottom: 30px;
 }
 
-.clique-aqui{
+.clique-aqui {
     text-decoration: underline;
 }
+
+@media(max-width:1189px){
+   .container-signup main{
+    width: 50%;
+   }
+}
+
+@media(max-width:660px){
+    .container-signup main{
+     width: 90%;
+    }
+
+    .container-signup form{
+        width: 90%;
+    }
+    .container-signup input {
+        height: 8%;
+    }
+.container-signup header{
+    justify-content: center;
+}
+ }
