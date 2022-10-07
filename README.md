@@ -20,6 +20,6 @@ As funcionalidades da aplicação são:
 
 Para cadastrar um novo usuário você terá que preencher o formulário na página de **sign-up**.
 
-![](https://i.imgur.com/BZNNvti.png)
+<img width="504" alt="image" src="https://user-images.githubusercontent.com/104026230/194585435-c156165e-c88a-4926-9120-699e41b57511.png">
 
 *Caso todos os campos não estiverem preenchidos, uma mensagem de erro aparecerá no formulário
