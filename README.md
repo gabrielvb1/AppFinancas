@@ -32,6 +32,7 @@ Após clicar no botão Cadastrar, o usuário será redirecionado para a página 
 2. O formulário de login valida se os campos estão realmente preenchidos. Se sim, a aplicação permite o login do usuário.
 3. Efetuado o login, o usuário é direcionado para a pagina principal **main**.
 4. Caso o usuário esteja logado, ele não poderá voltar a página de login. Apenas se ele se deslogar da aplicação em um botão na página main.
+<img width="1422" alt="image" src="https://user-images.githubusercontent.com/104026230/194592771-efb88c53-807f-405b-94b8-34d163d2d53c.png">
 
 ---
 ### Página principal (main):
