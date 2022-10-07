@@ -1,0 +1,79 @@
+.container-filtro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 66%;
+    min-height: 35%;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-bottom: 60px;
+}
+
+.container-filtro span {
+    margin-left: 35px;
+    margin-bottom: 18px;
+    color: #B9B9B9;
+
+}
+
+.primeira-linha {
+    display: flex;
+    gap: 13px;
+    max-width: 60%;
+    margin-left: 32px;
+    margin-bottom: 9px;
+    flex-wrap: wrap;
+}
+
+.cada-categoria {
+    display: flex;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 200px;
+    height: 23px;
+    padding: 0 8px;
+    cursor: pointer;
+    gap: 18px;
+}
+
+.cada-categoria:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+
+.cada-categoria img {
+    max-width: 10px;
+}
+
+.div-btns-filtro {
+    display: flex;
+    width: 100%;
+    gap: 18px;
+    margin-left: 32px;
+}
+
+
+
+.div-btns-filtro button {
+    all: unset;
+    background: #FAFAFA;
+    color: black;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 120px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.div-btns-filtro button:active {
+    transform: translateY(2px);
+}
+
+.div-btns-filtro .aplicar-filtro{
+    background-color: #7978D9;
+    color: white;
+}

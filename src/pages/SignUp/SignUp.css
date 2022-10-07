@@ -1,0 +1,87 @@
+.container-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-signup header {
+    display: flex;
+    position: relative;
+    bottom: 20px;
+    right: 500px;
+    color: white;
+
+}
+
+.container-signup header img {
+    margin-right: 10px;
+}
+
+.container-signup main {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    width: 30%;
+    align-items: center;
+    background-color: white;
+}
+
+.container-signup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-signup h2 {
+    margin-top: 40px;
+    margin-bottom: 33px;
+    color: #7978D9;
+
+}
+
+.container-signup label {
+    margin-bottom: 8px;
+}
+
+input {
+    width: 365px;
+    height: 50px;
+    margin-bottom: 31px;
+    padding: 0 5px;
+}
+
+.container-signup button {
+    all: unset;
+    text-align: center;
+    margin-bottom: 8px;
+    padding: 11px 47px;
+    background: #7978D9;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-signup button:active {
+    transform: translateY(2px);
+}
+
+.span-cadastro {
+    text-align: center;
+    color: #7B61FF;
+    cursor: pointer;
+}
+
+.span-error{
+    color: red;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.clique-aqui{
+    text-decoration: underline;
+}

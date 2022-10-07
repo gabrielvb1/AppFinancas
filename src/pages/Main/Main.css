@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'Lato', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Lato:wght@700&display=swap');
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90.23deg, #05EDE3 0.02%, #645FFB 99.63%);
+}
+
+.container-main header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+}
+
+.home {
+    display: flex;
+    color: white;
+    margin-left: 115px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 100px;
+    gap: 7px;
+}
+
+.nav p {
+    color: white;
+    margin-left: -5px;
+    margin-right: 10px;
+}
+
+.nav img {
+    cursor: pointer;
+}
+
+.container-main main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 60px 60px 0px 0px;
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+
+}
+
+.div-filtro {
+    display: flex;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    width: 6%;
+    right: 20px;
+    margin-bottom: 25px;
+    margin-left: 120px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.div-filtro:active {
+    transform: translateY(2px);
+}
+
+.mid-container {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    min-width: 69%;
+    font-family: 'Lato', sans-serif;
+    margin-left: -300px;
+}
+
+.linha-1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 58px;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+.linha-small {
+    text-align: center;
+    width: 12%;
+}
+
+.linha-small img{
+    cursor: pointer;
+}
+
+.linha-media {
+    text-align: center;
+    width: 15%;
+}
+
+.linha-grande {
+    text-align: center;
+    width: 18%;
+}
+
+.table-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 56px;
+    margin-top: 8px;
+    padding: 0 24px;
+    border-bottom: solid 1px #E0E0E0;
+}
+.data{
+    font-weight: 700;
+}
+.entrada{
+    font-weight: 700;
+    color: #645FFB;;
+    font-size: 17px;
+}
+
+.saida{
+    font-weight: 700;
+    color: #FA8C10;;
+    font-size: 17px;
+}
+
+.div-resumo {
+    position: absolute;
+    left: 1110px;
+    display: flex;
+    flex-direction: column;
+    height: 35%;
+    width: 17%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 13px;
+}
+
+.card h3 {
+    margin: 26px 0 23px 19px;
+}
+
+.entradas {
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    gap: 40px;
+}
+
+.entradas span {
+    color: #645FFB;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.saidas {
+    display: flex;
+    border-bottom: 1px solid #EAEAEA;
+    width: 200px;
+    gap: 56px;
+    margin-left: 22px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.saidas span {
+    font-weight: 500;
+    color: #FA8C10;
+    font-size: 15px;
+}
+
+.saldo {
+    display: flex;
+    margin-left: 24px;
+    gap: 58px;
+}
+
+.saldo span {
+    font-weight: 500;
+    color: #3A9FF1;
+    font-size: 17px;
+}
+
+.botao-add-registro {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+.botao-add-registro button {
+    all: unset;
+    background: #7978D9;
+    border-radius: 5px;
+    height: 38px;
+    width: 214px;
+    color: white;
+    cursor: pointer;
+}

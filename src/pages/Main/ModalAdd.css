@@ -1,0 +1,109 @@
+.modal {
+    min-width: 100vw;
+    min-height: 1035px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.modal-card {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 700px;
+    width: 30%;
+    border-radius: 20px;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 41px;
+    margin-bottom: 38px;
+}
+.top img{
+    cursor: pointer;
+}
+
+.div-btns-entrada-saida {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 38px;
+
+}
+
+.div-btns-entrada-saida button {
+    all: unset;
+    width: 180px;
+    height: 42px;
+    text-align: center;
+    background: #B9B9B9;
+    cursor: pointer;
+}
+
+.div-btns-entrada-saida .btn-modal-entrada {
+    background: #3A9FF1;
+    border-radius: 10px 0px 0px 10px;
+    color: white;
+}
+
+.div-btns-entrada-saida .btn-modal-saida {
+    background: #FF576B;
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+}
+
+.div-btns-entrada-saida .btn-modal-entrada-unactive {
+    border-radius: 10px 0px 0px 10px;
+    color: white;
+}
+
+.div-btns-entrada-saida .btn-modal-saida-unactive {
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+}
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.form-modal input {
+    padding: 0 5px;
+
+}
+
+.form-modal label{
+    margin-bottom: 9px;
+}
+
+.container-btn-modal {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.container-btn-modal button {
+    all: unset;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    width: 180px;
+    height: 38px;
+    text-align: center;
+    background: #7978D9;
+    margin-top: 20px;
+}
+
+select {
+    width: 107%;
+    height: 11%;
+    margin-bottom: 30px;
+}
