@@ -73,11 +73,26 @@
     display: flex;
     flex-direction: column;
     width: 80%;
+    height: 100%;
 }
 
 .form-modal input {
     padding: 0 5px;
-
+    height: 10%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 5%;
+    
+}
+.form-modal select {
+    padding: 0 5px;
+    height: 10%;
+    width: 100%;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 5%;
+    
 }
 
 .form-modal label{
