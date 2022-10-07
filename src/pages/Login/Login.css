@@ -127,7 +127,9 @@
     border-radius: 5px;
 
 }
-
+.btn-cadastro-responsivo{
+    display: none;
+}
 .span-error-login {
     color: red;
     margin-bottom: -10px;
@@ -143,6 +145,9 @@ button {
         display: none;
     }
 
+    .btn-cadastro-responsivo{
+        display: block;
+    }
     .container-login main {
         justify-content: center;
     }
@@ -164,9 +169,7 @@ button {
         margin-bottom: 15%;
     }
 
-    .login-card button {
-        margin-top: 15%;
-    }
+    
 
     .login-card input {
         height: 12%;

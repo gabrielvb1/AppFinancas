@@ -35,10 +35,6 @@ function Login() {
     }
   }
 
-  function handleNavigateToSignUp() {
-    navigate('/cadastro')
-  }
-
   return (
 
     <div className="container-login">
@@ -56,12 +52,12 @@ function Login() {
 
           <p> Organizar as suas finanças nunca foi tão fácil, com o DINDIN, você tem tudo num único lugar e em um clique de distância.</p>
 
-          <button onClick={() => handleNavigateToSignUp()}>Cadastre-se</button>
+          <button onClick={() => navigate('/cadastro')}>Cadastre-se</button>
         </div>
 
         <div className='login-card'>
           <form onSubmit={handleSubmit}>
-          <h2>Login</h2>
+            <h2>Login</h2>
             <div className='container-label'>
               <label>Email</label>
             </div>
@@ -82,6 +78,7 @@ function Login() {
             ></input>
             {invalid === true ? <span className='span-error-login'>{errorMsg}</span> : ''}
             <button>Entrar</button>
+           <button className='btn-cadastro-responsivo' type='button' onClick={()=>navigate('/cadastro')}>Cadastre-se</button>
           </form>
         </div>
       </main>
