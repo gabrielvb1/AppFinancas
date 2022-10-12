@@ -21,17 +21,27 @@
     width: 100%;
 }
 
+.menu-responsivo {
+    display: none;
+}
+
+.menu-responsivo img{
+    width: 40px;
+}
+
 .home {
     display: flex;
+    align-items: center;
     color: white;
-    margin-left: 115px;
+    margin-left: 10.5rem;
+    gap: 0.5rem;
 }
 
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-right: 100px;
+    margin-right: 10rem;
     gap: 7px;
 }
 
@@ -39,6 +49,7 @@
     color: white;
     margin-left: -5px;
     margin-right: 10px;
+    font-size: 1.5rem;
 }
 
 .nav img {
@@ -53,7 +64,6 @@
     height: 100%;
     width: 100%;
     padding-top: 50px;
-
 }
 
 .div-filtro {
@@ -68,6 +78,7 @@
     margin-left: 120px;
     padding: 8px 14px;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .div-filtro:active {
@@ -77,29 +88,29 @@
 .mid-container {
     display: flex;
     width: 100%;
-    height: 60%;
-    justify-content: center;
-
+    height: 100%;
+    padding: 0 5%;
+    gap: 12%;
 }
 
 .tabela {
     display: flex;
     flex-direction: column;
-    min-width: 69%;
+    width: 69%;
     font-family: 'Lato', sans-serif;
-    margin-left: -300px;
+    height: 100%;
 }
 
 .linha-1 {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 58px;
+    height: 14%;
     background: #FAFAFA;
     box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
     padding: 0 20px;
 }
@@ -109,7 +120,7 @@
     width: 12%;
 }
 
-.linha-small img{
+.linha-small img {
     cursor: pointer;
 }
 
@@ -123,7 +134,7 @@
     width: 18%;
 }
 
-.table-body{
+.table-body {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -134,33 +145,35 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 56px;
+    min-height: 50%;
     margin-top: 8px;
     padding: 0 24px;
     border-bottom: solid 1px #E0E0E0;
-}
-.data{
-    font-weight: 700;
-}
-.entrada{
-    font-weight: 700;
-    color: #645FFB;;
-    font-size: 17px;
+    font-size: 1.5rem;
 }
 
-.saida{
+.data {
     font-weight: 700;
-    color: #FA8C10;;
-    font-size: 17px;
+}
+
+.entrada {
+    font-weight: 700;
+    color: #645FFB;
+    font-size: 1.5rem;
+}
+
+.saida {
+    font-weight: 700;
+    color: #FA8C10;
+    font-size: 1.5rem;
 }
 
 .div-resumo {
-    position: absolute;
-    left: 1110px;
     display: flex;
     flex-direction: column;
-    height: 35%;
-    width: 17%;
+    height: 50%;
+    width: 19%;
+    font-size: 1.5rem;
 }
 
 .card {
@@ -188,7 +201,7 @@
 .entradas span {
     color: #645FFB;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .saidas {
@@ -204,7 +217,7 @@
 .saidas span {
     font-weight: 500;
     color: #FA8C10;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .saldo {
@@ -216,7 +229,7 @@
 .saldo span {
     font-weight: 500;
     color: #3A9FF1;
-    font-size: 17px;
+    font-size: 1.7rem;
 }
 
 .botao-add-registro {
@@ -233,4 +246,86 @@
     width: 214px;
     color: white;
     cursor: pointer;
+}
+
+@media(max-width:1190px) {
+
+    .linha {
+        width: 150%;
+    }
+
+    .linha-1 {
+        width: 200%;
+        padding: 0;
+    }
+
+    .tabela {
+        width: 80%;
+        overflow: auto;
+    }
+
+    .mid-container {
+        gap: 5%;
+    }
+
+    .div-resumo {
+        width: 26%;
+    }
+}
+
+@media(max-width:780px) {
+    .container-main header{
+        justify-content: flex-start;
+        gap: 180px;
+    }
+    .container-main .home{
+        margin-left: 40px;
+    }
+    .menu-responsivo {
+        display: block;
+    }
+
+    .fullscreen-menu {
+        width: 100%;
+        height: 200%;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .div-resumo {
+        width: 100%;
+        height: 40%;
+    }
+
+    .card {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tabela {
+        width: 100%;
+        height: 50%;
+    }
+
+    .mid-container {
+        flex-direction: column;
+    }
+
+    .linha {
+        width: 200%;
+    }
+
+    .div-filtro {
+        width: 20%;
+        right: -38px
+    }
 }

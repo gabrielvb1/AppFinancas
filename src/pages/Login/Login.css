@@ -30,7 +30,7 @@
     display: flex;
     flex-direction: column;
     width: 49%;
-    height: 57%;
+    height: 67%;
 }
 
 .left h1 {
@@ -38,6 +38,7 @@
     font-size: 52px;
     align-items: center;
     color: #FFFFFF;
+    margin-bottom: 8%;
 }
 
 .left__financas {
@@ -45,11 +46,11 @@
 }
 
 .left p {
-    margin-top: 33px;
     font-weight: 400;
     font-size: 28px;
     align-items: center;
     color: #FFFFFF;
+    margin-bottom: 5%;
 }
 
 .left button {
@@ -75,11 +76,6 @@
     background-color: #FFFFFF;
 }
 
-.login-card form {
-    display: flex;
-    align-items: center;
-}
-
 .container-label {
     display: flex;
     width: 85%;
@@ -96,8 +92,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 88%;
+    height: 100%;
+    
 }
 
 .container-label label {
@@ -144,34 +142,37 @@ button {
     .left {
         display: none;
     }
-
+ 
     .btn-cadastro-responsivo{
         display: block;
     }
     .container-login main {
         justify-content: center;
     }
-
     .login-card {
         width: 70%;
         height: 90%;
     }
+    .login-card button{
+        margin-top: 2%;
+    }
 }
-
 
 @media(max-width:570px) {
     .login-card {
         height: 80%;
         width: 94%;
     }
-
     .container-login h2 {
         margin-bottom: 15%;
     }
-
-    
-
     .login-card input {
         height: 12%;
+    }
+}
+
+@media(max-height:664px){
+    .left h1{
+        margin-bottom: 1%;
     }
 }

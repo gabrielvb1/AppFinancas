@@ -16,6 +16,8 @@ import ModalDelete from './ModalDelete';
 import ModalEditUser from './ModalEditUser';
 import ModalUpdateTransaction from './UpdateTransaction';
 import Filtro from './Filtro';
+import Hamburger from './assets/hamb.svg';
+import Fechar from './assets/close-modal-btn.svg'
 function Main() {
     const navigate = useNavigate()
     const token = getItem('token')
@@ -35,18 +37,16 @@ function Main() {
     const [filtroActive, setFiltroActive] = useState(false)
     const [tabelaLimpa, setTabelaLimpa] = useState([])
     const [currentItem, setCurrentItem] = useState(null)
-
+    const [openResponsiveMenu, setOpenResponsiveMenu] = useState(false)
     useEffect(() => {
         async function handleGetTransactions() {
             try {
                 const responseTransacao = await api.get('/transacao', { headers: { Authorization: `Bearer ${token}` } })
-
                 setTabela([...responseTransacao.data])
                 setTabelaLimpa([...responseTransacao.data])
                 const responseExtrato = await api.get('/transacao/extrato', { headers: { Authorization: `Bearer ${token}` } })
                 setExtrato({ ...responseExtrato.data })
                 return
-
             } catch (error) {
                 if (tabela.length < 1) {
                     return setExtrato(0)
@@ -56,7 +56,6 @@ function Main() {
         }
         handleGetTransactions()
     }, [token, tabela.length])
-
 
     useEffect(() => {
         async function getCategorias() {
@@ -83,7 +82,6 @@ function Main() {
         setTransacaoId(id)
         setCategoriaId(categoriaId)
     }
-
     useEffect(() => {
         async function handleGetCurrentUser() {
             try {
@@ -104,7 +102,10 @@ function Main() {
         navigate(-1);
         clear()
     }
-
+    function handleResponsiveEditUser(){
+        setEditUSer(true)
+        setOpenResponsiveMenu(false)
+    }
     return (
         <div className='container-main'>
             <header>
@@ -118,10 +119,17 @@ function Main() {
                     <p>{nomeHome}</p>
                     <img src={Sair} alt='icone-sair' onClick={() => handleLogOut()}></img>
                 </div>
+                <div className={`${openResponsiveMenu ?'fullscreen-menu' : 'menu-responsivo'}`}>
+                    {!openResponsiveMenu && <img src={Hamburger} alt='menu-hamburger' onClick={() => setOpenResponsiveMenu(true)}></img>}
+                    {openResponsiveMenu && <img src={Fechar} onClick={() => setOpenResponsiveMenu(false)} alt='icone-fechar' />}
+                    {openResponsiveMenu && <div className='nav-responsiva'>
+                        <img src={Usuario} alt='icone-usuario' onClick={() => handleResponsiveEditUser(true)}></img>
+                        <img src={Sair} alt='icone-sair' className='icone-sair' onClick={() => handleLogOut()}></img>
+                    </div>}
+                </div>
             </header>
 
             <main>
-
                 <div className='div-filtro' onClick={() => setFiltroActive(!filtroActive)}>
                     <img src={Filtrar} alt='icone-filtro'></img>
                     <p>Filtrar</p>
@@ -133,7 +141,6 @@ function Main() {
                     tabelaLimpa={tabelaLimpa}
                 />}
                 <div className='mid-container'>
-
                     <div className='tabela'>
                         <div className='linha-1'>
                             <p className='linha-small'>Data</p>
@@ -145,7 +152,6 @@ function Main() {
                         </div>
                         <div className='table-body'>
                             {tabela.map((linha) => {
-
                                 return (
                                     <div className='linha' key={linha.id}>
                                         <p className='linha-small data'>{format(new Date(linha.data), 'dd/MM/yyyy')}</p>
@@ -155,7 +161,7 @@ function Main() {
                                         {linha.tipo === 'entrada' ? <p className='linha-small entrada'>R$ {(linha.valor / 100).toFixed(2).replace('.', ',')}</p> : <p className='linha-small saida'>R$ {(linha.valor / 100).toFixed(2).replace('.', ',')}</p>}
                                         <div className='linha-small'>
                                             <img src={Editar} alt='icone-editar' onClick={() => handleGetCurrentTransaction(linha, linha.id, linha.categoria_id, linha.categoria_nome)}></img>
-                                            <img src={Excluir} alt= 'icone-excluir' onClick={() => handleOpenDeleteModal(linha)}></img>
+                                            <img src={Excluir} alt='icone-excluir' onClick={() => handleOpenDeleteModal(linha)}></img>
                                             <ModalDelete
                                                 modalDelete={modalDelete && linha.id === currentItem.id}
                                                 handleOpenDeleteModal={handleOpenDeleteModal}
@@ -171,13 +177,11 @@ function Main() {
                                                 setTabelaLimpa={setTabelaLimpa}
                                             />
                                         </div>
-
                                     </div>
                                 )
                             })}
                         </div>
                     </div>
-
                     <div className='div-resumo'>
                         <div className='card'>
                             <h3>Resumo</h3>
@@ -199,7 +203,6 @@ function Main() {
                         </div>
                     </div>
                 </div>
-
             </main>
             {modalOpen && <Modal
                 setModalOpen={setModalOpen}
@@ -240,20 +243,7 @@ function Main() {
                 editUser={editUser}
                 setNomeHome={setNomeHome}
             />}
-
-            {/* {modalDelete && <ModalDelete
-                handleOpenDeleteModal={handleOpenDeleteModal}
-                api={api}
-                token={token}
-                transacaoId={transacaoId}
-                tabela={tabela}
-                setTabela={setTabela}
-                modalFormData={modalFormData}
-                setExtrato={setExtrato}
-                extrato={extrato}
-            />} */}
         </div>
     )
 }
-
 export default Main
